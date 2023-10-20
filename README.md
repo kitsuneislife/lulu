@@ -26,3 +26,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dentro do projeto de códigos, temos uma estrutura sucinta porém funcional, que usa tecnologias como o HTML, EJS, CSS, Javascript e ferramentas como o Mongo.DB para o banco de dados. A parte do nosso catálogo, em que são mostradas as coleções, é gerada de forma que o sistema busca as informações do banco de dados através da nossa API e em seguida as trata com o DOM para disponibilizá-las da forma que é mostrada no site.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A Nossa API é bem simples e apresenta apenas o Schema para os produtos (Não foi gerado o Schema para os Usuários, pois acordamos que não há necessidade de cadastro de clientes neste caso), ela também fornece os métodos para inserir, atualizar e deletar as entradas do banco de dados.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Também fizemos uma ferramenta para facilitar o cadastro e manipulação dos produtos, ela oferece uma interface básica para auxiliar os funcionários da empresa a fazer alterações no nosso catálogo.<br>
+
+## Licença
+
+Lançado sob a licença [GNU](/LICENSE) por [@kitsuneislife](https://github.com/kitsuneislife).
