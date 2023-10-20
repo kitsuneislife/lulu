@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="/Styles/Index.css" rel="stylesheet">
+    <title>LuluDev</title>
+  </head>
+  <body>
+    <div style="display: flex">
+      <div class="_nav_container">
+        <div class="_nav_list_container">
+            <div class="_nav_list_option" onclick="window.location.href='?page=produtos'">
+              Produtos
+            </div>
+            <div class="_nav_list_option" onclick="window.location.href='?page=add'">
+              Adicionar
+            </div>
+        </div>
+      </div> 
+      <div style="width: 85vw; border-left: 1px solid rgba(0, 0, 0, 0.2); margin-left: 15vw;">
+        <% if(req.query.page == "edit") { %>
+          <%-include("Edit.ejs")%>
+        <% } else if(req.query.page == "add") { %>
+          <%-include("Add.ejs")%>
+        <% } else if(req.query.page == "produtos") { %>
+          <%-include("Produtos.ejs")%>
+        <% } else { %>
+          <%-include("Produtos.ejs")%>
+        <% } %>
+      </div>
+    </div>
+      </body>
+</html>

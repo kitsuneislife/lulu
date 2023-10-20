@@ -1,0 +1,120 @@
+.main-p-row {
+  display: flex;
+  gap: 25px;
+}
+
+.main-mosaic-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.main-mosaic-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-mosaic-image {
+  width: 200px;
+  height: 266.8px;
+}
+
+.mm-big {
+  width: 400px;
+  height: auto;
+}
+.mm-medium {
+  width: 300px;
+  height: auto;
+}
+.main-p-info {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  width: 400px;
+}
+
+.main-pi-brand {
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.main-pi-label {
+  font-size: 30px;
+  font-weight: lighter;
+}
+.main-pi-price {
+  font-size: 20px;
+  margin-top: 40px;
+}
+.main-pi-desc {
+  font-weight: lighter;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.main-pi-buttons {
+  display: none;
+  gap: 20px;
+  margin-top: 40px;
+}
+.main-pi-cart {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 10px;
+  width: 38px;
+  cursor: pointer;
+  transition: background 0.2s, filter, 0.2s;
+}
+.main-pi-cart:hover {
+  background: white;
+  filter: invert(1);
+}
+
+.main-pi-buy {
+  display: flex;
+  justify-content: center;
+  padding: 15px 10px;
+  border: 1px solid black;
+  width: 100%;
+  background: black;
+  cursor: pointer;
+  transition: border 0.2s, filter, 0.2s;
+}
+.main-pi-buy:hover {
+  border: 1px solid white;
+  filter: invert(1);
+}
+.main-pi-buy-label {
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .mmr-rearrange {
+    flex-direction: column;
+  }
+  .mmc-rearrange {
+    flex-direction: row;
+  }
+  .main-mosaic-image {
+    width: 50%;
+    height: auto;
+  }
+  .mm-big {
+    width: 100%;
+    height: auto;
+  }
+  .mm-medium {
+    width: 50%;
+    height: auto;
+  }
+  .main-p-row {
+    flex-direction: column-reverse;
+  }
+  .main-p-info {
+    width: 90%;
+  }
+}

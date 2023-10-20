@@ -1,0 +1,248 @@
+*, html {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  user-select: none;
+  -moz-user-select: none;
+  webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 15px 75px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.subheader-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+}
+
+.header-title-text {
+  margin-right: 75px;
+  font-size: 36px;
+  color: black;
+  font-family: 'Lobster', cursive;
+}
+
+.header-menu-container {
+  
+}
+
+.header-menu-ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+}
+
+.header-menu-li {
+  
+}
+
+.header-menu-button {
+  background: white;
+  border: none;
+  cursor: pointer;
+
+  position: relative;
+  display: inline-block; 
+}
+
+.header-menu-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  bottom: 0;
+  right: 0; 
+  margin-left: 3.5px; margin-right: 3px;
+  transition: width 0.3s;
+  transform-origin: right;
+}
+
+.header-menu-button:hover::after {
+  width: 92%;
+  right: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.header-menu-option {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 600;
+}
+
+.header-menu-mobile {
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+}
+
+.header-menu-toggle {
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header-menu-toggle-image {
+  height: 32px;
+  width: 32px;
+}
+
+/* Main */
+
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;  
+  padding: 20px;
+}
+
+.main-banner-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.main-banner-container:hover .main-banner-image {
+  filter: brightness(0.1);   
+}
+
+.main-banner-container:hover .main-banner-text-container {
+  opacity: 1;
+}
+
+.main-banner-image {
+  width: 64.7vh;
+  transition: filter 0.3s;
+}
+
+.main-banner-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  transition: background-color 0.3s, opacity 0.3s;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.main-banner-title {
+  color: white;
+  font-weight: 600;
+  font-size: 19px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-banner-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.main-banner-button {
+  color: white;
+  padding: 10px 15px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.3s;
+}
+
+.main-banner-button:hover {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: 1px solid white;
+}
+
+.main-emphasis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.main-emphasis-block {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.main-emphasis-image {
+  background-color: #e6e3d9;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.main-emphasis-image:hover {
+  border-bottom: 2px solid black;
+}
+
+.main-news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.main-news-title {
+  font-weight: 600px;
+  font-size: 36px;
+  text-align: center;
+}
+
+.main-news-text {
+  font-size: 18px;
+  text-align: center;
+}
+
+.main-news-button {
+  color: black;
+  padding: 10px 15px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.3s;
+}
+
+.main-news-button:hover {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+}
+
+.main-invisi {
+  background: white;
+  z-index: 1;
+  position: sticky;
+}
+
+.footer-invisi {
+  height: 509px;
+}
+
+/* */

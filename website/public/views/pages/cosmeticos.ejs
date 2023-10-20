@@ -1,0 +1,110 @@
+<div class="main-invisi">
+  <div class="main-video-container">
+    <div class="main-collections-container" id="main-collections-container">
+      <div onClick="window.location.href='/moda'" class="main-collections-separator">
+        <a class="main-collections-button">Moda</a>
+      </div>
+      <div onClick="window.location.href='/joalheria'" class="main-collections-separator">
+        <a class="main-collections-button">Joalheria</a>
+      </div>
+      <div onClick="window.location.href='/perfumes'" class="main-collections-separator">
+        <a class="main-collections-button">Perfumes</a>
+      </div>
+      <div class="mcs-rearrange">
+        <a class="main-collections-button">Cosméticos</a>
+      </div>
+    </div>
+    <!--div class="main-video-label-container">
+      <span class="main-video-label" style="font-style: italic; color: #A32135;">Cosméticos</span>
+    </div-->
+    <img src="/assets/example/2103.jpg" class="main-video">
+  </div>
+  <main class="main-flex main-flex-store" id="main-flex">
+    <!--div class="main-coll-container"><div class="main-coll-button"><span class="main-coll-label">Coleção Black&White</span><img src="/assets/plus.svg" class="main-coll-icon"></div><div class="main-coll-content"> eu amo te </div></div><div class="main-coll-container"><div class="main-coll-button"><span class="main-coll-label">Coleção Verão 2023</span><img src="/assets/plus.svg" class="main-coll-icon"></div><div class="main-coll-content"> eu amo te </div></div-->
+  </main>
+</div>
+<!--div class="footer-invisi"></div-->
+<script>
+  const url = "https://lulu-api.kitsuneislife.repl.co/request?collection=produtos";
+  fetch(url).then(response => {
+    if (!response.ok) {
+      throw new Error(response.status, response.statusText);
+    }
+    return response.json();
+  }).then(rawData => {
+    console.log(JSON.stringify(rawData));
+    for (const i in rawData) {
+      let product = rawData[i];
+      if(product.category.toLowerCase() == "cosméticos") {
+        let display_x = product.display.toLowerCase();
+          const main_flex = document.getElementById("main-flex");
+          const mcc_check = document.getElementById(`mcc-${display_x}`);
+          const mpc = document.createElement("div");
+          mpc.id = `mpc-${product._id}`;
+          mpc.classList.add("main-product-container");
+          mpc.onclick = function rdirect() { window.location.href=`/produto?id=${product._id}` };
+          const mpi = document.createElement("img");
+          mpi.src = product.image;
+          mpi.classList.add("main-product-image");
+          const mpb = document.createElement("span");
+          mpb.innerHTML = product.brand;
+          mpb.classList.add("main-product-brand");
+          const mpl = document.createElement("span")
+          mpl.innerHTML = product.name;
+          mpl.classList.add("main-product-label");
+          const mpv = document.createElement("span");
+          mpv.innerHTML = `R$ ${product.price}`
+          mpv.classList.add("main-product-value");
+          mpc.appendChild(mpi);
+          mpc.appendChild(mpb);
+          mpc.appendChild(mpl);
+          mpc.appendChild(mpv);
+          if (mcc_check) {
+            const mcct = document.getElementById(`mcct-${display_x}`)
+            mcct.appendChild(mpc);
+          } else {
+            const mcc = document.createElement("div");
+            mcc.id = `mcc-${display_x}`;
+            mcc.classList.add("main-coll-container");
+            const mcb = document.createElement("div");
+            //mcb.id = `mcb-${display_x}`;
+            mcb.classList.add("main-coll-button");
+            const mcl = document.createElement("span");
+            mcl.innerHTML = `Coleção ${product.display}`;
+            mcl.classList.add("main-coll-label");
+            const mci = document.createElement("img");
+            mci.src = "/assets/plus.svg";
+            mci.classList.add("main-coll-icon");
+            const mcct = document.createElement("div");
+            mcct.id = `mcct-${display_x}`
+            mcct.classList.add("main-coll-content");
+            mcb.appendChild(mcl);
+            mcb.appendChild(mci);
+            mcc.appendChild(mcb);
+            mcct.appendChild(mpc);
+            mcc.appendChild(mcct);
+            main_flex.appendChild(mcc);
+          }
+        }
+      }
+    var coll = document.getElementsByClassName("main-coll-button");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          var icon = this.querySelector(".main-coll-icon");
+          icon.src = "/assets/plus.svg";
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          var icon = this.querySelector(".main-coll-icon");
+          icon.src = "/assets/minus.svg";
+        }
+      });
+    }
+  }).catch(error => {
+    console.log(error.message);
+  });
+</script>

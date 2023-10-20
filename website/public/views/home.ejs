@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/interface.css">
+    <link rel="stylesheet" href="styles/moda.css">
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="styles/store.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Borel&family=Lobster&family=Work+Sans&display=swap');
+    </style>
+    <title>Lulu</title>
+  </head>
+  <body>      
+    <% if(req.params['0'] == "store") { %>
+      <%-include("./patterns/headerStore.ejs")%>
+      <%-include("./pages/store.ejs")%>
+    <% } else if(req.params['0'] == "moda") { %>
+      <%-include("./patterns/headerStore.ejs")%>
+      <%-include("./pages/moda.ejs")%>
+    <% } else if(req.params['0'] == "joalheria") { %>
+      <%-include("./patterns/headerStore.ejs")%>
+      <%-include("./pages/joalheria.ejs")%>
+    <% } else if(req.params['0'] == "perfumes") { %>
+      <%-include("./patterns/headerStore.ejs")%>
+      <%-include("./pages/perfumes.ejs")%>
+    <% } else if(req.params['0'] == "cosmeticos") { %>
+      <%-include("./patterns/headerStore.ejs")%>
+      <%-include("./pages/cosmeticos.ejs")%>
+    <% } else { %>
+      <%-include("./patterns/header.ejs")%>
+      <%-include("./pages/homepage.ejs")%>
+    <% } %>
+      
+    <%-include("./patterns/footer.ejs")%>
+    <script src="/scripts/collapsible.js"></script>
+    <script src="/scripts/interface.js"></script>
+    <script src="/scripts/media.js"></script>
+  </body>
+</html>

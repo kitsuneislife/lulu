@@ -1,0 +1,126 @@
+<header class="header-flex">
+  <div class="subheader-flex">
+    <div class="header-title">
+      <a class="header-link" href="/">
+        <span class="header-title-text">Lulu</span>
+      </a>
+    </div>
+    <div class="header-menu-container">
+      <ul class="header-menu-ul">
+        <li class="header-menu-li">
+          <button class="header-menu-button" onClick="window.location.href='/store'">
+            <span class="header-menu-option">STORE</span>
+          </button>
+        </li>
+        <li class="header-menu-li">
+          <button class="header-menu-button" onClick="window.location.href='/news'">
+            <span class="header-menu-option">NOVIDADES</span>
+          </button>
+        </li>
+        <li class="header-menu-li">
+          <button class="header-menu-button" onClick="window.location.href='/about'">
+            <span class="header-menu-option">SOBRE NÓS</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header-menu-mobile">
+    <button class="header-menu-toggle" id="header-button-profile">
+      <img class="header-menu-toggle-image" src="/assets/profile.svg">
+    </button>
+    <button class="header-menu-toggle" id="header-button-search">
+      <img class="header-menu-toggle-image" src="/assets/search.svg">
+    </button>
+    <button class="header-menu-toggle" id="header-button-favorite">
+      <img class="header-menu-toggle-image" src="/assets/favorite.svg">
+    </button>
+    <button class="header-menu-toggle" id="header-button-bag">
+      <img class="header-menu-toggle-image" src="/assets/bag.svg">
+    </button>
+    <button class="header-menu-toggle" id="header-button-menu">
+      <img class="header-menu-toggle-image" src="/assets/menu.svg">
+    </button>
+  </div>
+</header>
+<!-- Menu lateral -->
+<div class="interface-container">
+  <div class="interface-mobile-menu" id="interface-mobile-menu">
+    <div class="interface-mobile-menu-header">
+      <button class="interface-mobile-menu-button" id="interface-mobile-menu-close">
+        <img class="interface-mobile-menu-image" src="/assets/close.svg">
+      </button>
+    </div>
+    <div class="interface-mobile-menu-body">  
+      <div class="interface-mobile-menu-separator" onClick="window.location.href='/store'">
+        <span class="interface-mobile-menu-item">STORE</span>
+        <img class="interface-mobile-menu-image" src="/assets/chevron_right.svg">
+      </div>
+      <div class="interface-mobile-menu-separator">
+        <span class="interface-mobile-menu-item" onClick="window.location.href='/store'">NOVIDADES</span>
+        <img class="interface-mobile-menu-image" src="/assets/chevron_right.svg">
+      </div>
+      <div class="interface-mobile-menu-separator" onClick="window.location.href='/about'">
+        <span class="interface-mobile-menu-item">SOBRE NÓS</span>
+      </div>
+      <div class="interface-mobile-menu-list">
+        <div class="interface-mobile-menu-list-separator">
+          <img class="interface-mobile-menu-list-image" src="/assets/profile.svg">
+          <span class="interface-mobile-menu-list-item">Entrar</span>
+        </div>
+        <div class="interface-mobile-menu-list-separator">
+          <img class="interface-mobile-menu-list-image" src="/assets/favorite.svg">
+          <span class="interface-mobile-menu-list-item">Lista de Desejos</span>
+        </div>
+        <div class="interface-mobile-menu-list-separator">
+          <img class="interface-mobile-menu-list-image" src="/assets/bag.svg">
+          <span class="interface-mobile-menu-list-item">Carrinho</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Menu Store -->
+<div class="interface-container">
+  <div class="interface-mobile-menu" id="interface-mobile-menu-store">
+    <div class="interface-mobile-menu-header">
+      <button class="interface-mobile-menu-button" id="interface-mobile-menu-store-close">
+        <img class="interface-mobile-menu-image" src="/assets/close.svg">
+      </button>
+    </div>
+    <div class="interface-mobile-menu-body">
+      <div class="interface-mobile-menu-separator" onClick="window.location.href='/moda'">
+        <span class="interface-mobile-menu-item">Moda</span>
+        <img class="interface-mobile-menu-image" src="/assets/chevron_right.svg">
+      </div>
+      <div class="interface-mobile-menu-separator" onClick="window.location.href='/joalheria'">
+        <span class="interface-mobile-menu-item">Joalheria</span>
+        <img class="interface-mobile-menu-image" src="/assets/chevron_right.svg">
+      </div>
+      <div class="interface-mobile-menu-separator" onClick="window.location.href='/perfumes'">
+        <span class="interface-mobile-menu-item">Perfumes</span>
+        <img class="interface-mobile-menu-image" src="/assets/chevron_right.svg">
+      </div>
+      <div class="interface-mobile-menu-separator" onClick="window.location.href='/cosmeticos'">
+        <span class="interface-mobile-menu-item">Cosméticos</span>
+        <img class="interface-mobile-menu-image" src="/assets/chevron_right.svg">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Mobile search -->
+<div class="interface-container-search" id="interface-container-search">
+  <div class="interface-mobile-search" id="interface-mobile-search">
+    <div class="interface-mobile-search-header">
+      <div class="interface-mobile-search-box">
+        <img class="interface-mobile-search-icon" src="/assets/search.svg">
+      </div>
+      <button class="interface-mobile-search-button" id="interface-mobile-search-close">
+        <span class="interface-mobile-search-close">FECHAR</span>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="interface-container-product" id="interface-container-product">
+  <div class="interface-product-flex"></div>
+</div>
